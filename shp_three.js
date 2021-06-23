@@ -23,9 +23,9 @@ p.createModel = function(shp, spherize) {
             y = Math.sin(t) * 90;
             x = Math.cos(a) * 90 * Math.cos(t);
             var z = Math.sin(a) * 90 * Math.cos(t);
-            poly.push(new THREE.Vector3(x, y, z));
+            poly.push(new THREE.Vector3(x, z, -y));
           } else {
-            poly.push(new THREE.Vector3(x, y, 0));
+            poly.push(new THREE.Vector3(x, 0, -y));
           }
         }
         if (false && r.type == SHP.POLYGON) {
